@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <div class="container">
+        <div class="form-elements">
+            <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Name*</label>
+                    <label class="validation-error hide" id="nameValidationError">This field is required!</label><br>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label>Email ID</label><br>
+                    <input type="email" name="email" id="email">
+                </div>
+                <!-- Phone Number <input type="number"><br> -->
+                <div>
+                    <label>City</label>
+                    <br>
+                    <select id="city" name="city">
+                        <option disabled selected value> -- select your city -- </option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Hydrabad">Hydrabad</option>
+                        <option value="Gandhinagar">Gandhinagar</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Subject</label><br>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div>
+                    <label>Query Details</label><br>
+                    <textarea id="query" name="query" cols="30" rows="5" placeholder="Enter your query here..."></textarea>
+                </div>
+                <div >
+                    <input type="submit" class="submit-btn" value="Send Message">
+                </div>
+            </form>
+        </div>
+        <div class="list">
+            <table id="clist">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email ID</th>
+                        <th>City</th>
+                        <th>Subject</th>
+                        <th>Query</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
