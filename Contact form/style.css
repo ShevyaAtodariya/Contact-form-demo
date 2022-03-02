@@ -78,6 +78,9 @@ label.validation-error{
     display: none;
 }
 
+#btn{
+    width: 135px;
+}
 
 @media (min-width: 768px) {
     .container{
@@ -97,6 +100,6 @@ label.validation-error{
 @media (min-width: 1024px){
     .container{
         margin: auto;
-        width: 60%;
+        width: 70%;
     }
 }
